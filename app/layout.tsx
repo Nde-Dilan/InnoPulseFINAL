@@ -31,6 +31,21 @@ export default async function RootLayout({
             <main className="max-w-6xl mx-auto">{children}</main>
           </div>
           <Footer/>
+
+<Script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</Script>
+
+<Script type="text/javascript">{`
+
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+          pageLanguage: 'en'
+      },
+      'google_translate_element'
+  );
+}
+window.location.hash='#googtrans('+navigator.language.split("-")[0]+')';`}
+</Script> 
           <Script id="tawk-to" strategy="afterInteractive">
             {`
               var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
