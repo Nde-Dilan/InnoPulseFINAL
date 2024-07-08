@@ -3,6 +3,7 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import Header from "@/components/Header";
 import { Toaster } from "@/components/ui/sonner";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "LinkedIn 2.0 clone",
@@ -27,7 +28,9 @@ export default async function RootLayout({
           <div className=" bg-[#F4F2ED] flex-1 w-full">
             <main className="max-w-6xl mx-auto">{children}</main>
           </div>
+          <Footer/>
         </body>
+        
       </html>
     </ClerkProvider>
   );
