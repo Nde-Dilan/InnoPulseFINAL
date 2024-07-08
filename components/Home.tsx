@@ -31,4 +31,4 @@ const HomePage = async () => {
   )
 }
 
-export default HomePage;
+export default HomePage;  

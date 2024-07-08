@@ -16,12 +16,12 @@ async function Header() {
       {/* Logo */}
       <Image
         className="rounded-lg"
-        src="/logo.png"
+        src="https://links.papareact.com/b3z"
         width={40}
         height={40}
         alt="logo"
       />
-        <b>InnoPulse</b>
+
       {/* Search */}
       {/* SearchIcon */}
       <div className="flex-1">
@@ -46,7 +46,7 @@ async function Header() {
           <p>Network</p>
         </Link>
 
-        <Link href="" className="icon hidden md:flex">
+        <Link href="/myjobs" className="icon hidden md:flex">
           <Briefcase className="h-5" />
           <p>Jobs</p>
         </Link>
