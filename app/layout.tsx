@@ -29,8 +29,7 @@ export default async function RootLayout({
             <main className="max-w-6xl mx-auto">{children}</main>
           </div>
           <Footer/>
-        </body>
-        <Script id="tawk-to" strategy="afterInteractive">
+          <Script id="tawk-to" strategy="afterInteractive">
             {`
               var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
               (function(){
@@ -43,6 +42,8 @@ export default async function RootLayout({
               })();
             `}
           </Script>
+        </body>
+       
       </html>
     </ClerkProvider>
   );
