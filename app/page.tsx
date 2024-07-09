@@ -14,7 +14,7 @@ export const revalidate = 0;
 
 export default async function Home() {
   await connectDB();
-  const isSignedIn = false;
+  const isSignedIn = true;
 
   return (
     isSignedIn ? (
