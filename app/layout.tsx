@@ -4,6 +4,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import Header from "@/components/Header";
 import { Toaster } from "@/components/ui/sonner";
 import MyJobsPage from "./jobOpportunities/page";
+
 import Footer from "@/components/Footer";
 import Script from "next/script";
 
@@ -23,9 +24,7 @@ export default async function RootLayout({
         <body className="min-h-screen flex flex-col">
           <Toaster position="bottom-left" />
 
-          <header className="border-b sticky top-0 bg-white z-50">
-            <Header />
-          </header>
+         
 
           <div className=" bg-[#F4F2ED] flex-1 w-full">
             <main className="max-w-6xl mx-auto">{children}</main>
