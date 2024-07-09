@@ -31,11 +31,15 @@ export default async function createPostAction(formData: FormData) {
 
   try {
     if (image.size > 0) {
+      
       console.log("Uploading image to Firebase Storage...", image);
 
       const timestamp = new Date().getTime();
       const file_name = `${randomUUID()}_${timestamp}.png`;
       const bucket = storage.bucket();
+
+      console.log("Bucket", bucket.name);
+      
 
       const file = bucket.file(`images/${file_name}`);
       
@@ -47,10 +51,11 @@ export default async function createPostAction(formData: FormData) {
 
 
       stream.on('error', (err: { message: any; }) => {
-        throw new Error(`Unable to upload image: ${err.message}`);
+        throw  new Error(`Unable to upload image: ${err.message}`);
       });
 
       stream.on('finish', async () => {
+        console.log("Starting File uploaded successfully!");
         image_url = `https://storage.googleapis.com/${bucket.name}/${file.name}`;
         console.log("File uploaded successfully!", image_url);
 
