@@ -32,10 +32,10 @@ export default async function RootLayout({
           </div>
           <Footer/>
 
-<Script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+<Script id="google-translate-1" type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
 </Script>
 
-<Script type="text/javascript">{`
+<Script id="google-translate" strategy="afterInteractive">{`
 
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({
