@@ -19,7 +19,7 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/notifications">
+            <Link href="/notification">
               <div className="block p-3 hover:bg-gray-200 rounded-md cursor-pointer">Notifications</div>
             </Link>
           </li>

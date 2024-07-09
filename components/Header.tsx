@@ -10,17 +10,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "./ui/button";
 
-async function Header() {
+ function Header() {
   return (
     <div className="flex items-center p-2 max-w-6xl mx-auto">
       {/* Logo */}
       <Image
         className="rounded-lg"
-        src="https://links.papareact.com/b3z"
+        src="/logo.png"
         width={40}
         height={40}
         alt="logo"
       />
+      <h1><div >InnoPulse</div></h1>
 
       {/* Search */}
       {/* SearchIcon */}
@@ -36,14 +37,14 @@ async function Header() {
       </div>
 
       <div className="flex items-center space-x-4 px-6">
-        <Link href="" className="icon">
+        <Link href="/" className="icon">
           <HomeIcon className="h-5 " />
           <p>Home</p>
         </Link>
 
         <Link href="" className="icon hidden md:flex">
           <UsersIcon className="h-5" />
-          <p>Network</p>
+          <p>Connect</p>
         </Link>
 
         <Link href="/myjobs" className="icon hidden md:flex">
@@ -51,9 +52,9 @@ async function Header() {
           <p>Jobs</p>
         </Link>
 
-        <Link href="" className="icon">
+        <Link href="/notification" className="icon">
           <MessagesSquare className="h-5" />
-          <p>Messaging</p>
+          <p>Notifications</p>
         </Link>
 
         <SignedIn>

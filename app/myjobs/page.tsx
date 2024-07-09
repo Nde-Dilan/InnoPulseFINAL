@@ -2,6 +2,11 @@
 
 import { useState } from 'react';
 import { BriefcaseIcon } from '@heroicons/react/outline'; // BriefcaseIcon for job listings
+import Header from '@/components/Header';
+import UserInformation from '@/components/UserInformation';
+import { IPostDocument } from '@/mongodb/models/post';
+import Sidebar from '@/components/SideBar';
+import Widget from '@/components/Widget';
 
 const MyJobsPage = () => {
   const [expandedJob, setExpandedJob] = useState<number | null>(null);
@@ -61,7 +66,12 @@ const MyJobsPage = () => {
   };
 
   return (
-    <section className="py-16 md:py-20 lg:py-28 bg-gray-50 dark:bg-gray-800 flex flex-col items-center">
+    <>
+    <Header/>
+
+   <div className='grid grid-cols-8 mt-5 sm:px-5'>
+   
+   <section className="col-span-full md:col-span-6 xl:col-span-4 xl:max-w-xl mx-auto w-full py-16 md:py-20 lg:py-28 bg-gray-50 dark:bg-gray-800 flex flex-col items-center">
       <div className="container max-w-4xl">
         <div className="flex items-center mb-8">
           <BriefcaseIcon className="h-8 w-8 text-gray-600 dark:text-gray-400 mr-2" />
@@ -123,6 +133,12 @@ const MyJobsPage = () => {
         </div>
       )}
     </section>
+    <section className="hidden xl:inline justify-center col-span-2">
+        <Widget />
+      </section>
+   </div>
+    </>
+
   );
 };
 

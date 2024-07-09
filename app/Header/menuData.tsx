@@ -32,6 +32,18 @@ const menuData: Menu[] = [
     newTab: false,
   },
   {
+    id: 6,
+    title: "HomePage",
+    path: " /",
+    newTab: false,
+  },
+  {
+    id: 5,
+    title: "Notification",
+    path: " /notification",
+    newTab: false,
+  },
+  {
     id: 4,
     title: "Pages",
     newTab: false,

@@ -133,7 +133,7 @@ function PostOptions({
 
         <Button variant="ghost" className="postButton">
           <Send className="mr-1" />
-          Send
+          Apply
         </Button>
       </div>
 

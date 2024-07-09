@@ -48,7 +48,7 @@ const Headers = () => {
                 } `}
               >
                 <Image
-                  src="/images/logo/logo-2.svg"
+                  src="/logo.png"
                   alt="logo"
                   width={140}
                   height={30}

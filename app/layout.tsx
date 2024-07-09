@@ -3,7 +3,6 @@ import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import Header from "@/components/Header";
 import { Toaster } from "@/components/ui/sonner";
-import MyJobsPage from "./jobOpportunities/page";
 
 import Footer from "@/components/Footer";
 import Script from "next/script";
