@@ -1,9 +1,14 @@
 
+import AboutPage from "@/app/about/page";
+import Headers from "@/app/Header";
 import Link from "next/link";
+import { Button } from "./ui/button";
+import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
 
 const LandinPage = () => {
   return (
     <>
+      <Headers />
       <section
         id="home"
         className="relative z-10 overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-900 md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
@@ -19,14 +24,26 @@ const LandinPage = () => {
                   Connect with skilled professionals from around the world. Our platform matches you with top tech talent to help your business grow and innovate.
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                  <Link
-                    href="/get-started"
-                    className="rounded-lg bg-blue-600 px-8 py-4 text-lg font-semibold text-white duration-300 ease-in-out hover:bg-blue-700"
+                  <Button variant='secondary'
+                    className="rounded-lg bg-blue-600 px-8 py-8 text-lg font-semibold text-white duration-300 ease-in-out hover:bg-blue-700"
                   >
-                    🚀 Get Started
-                  </Link>
+                    <SignedIn>
+                      <Button asChild className="rounded-lg bg-blue-600  hover:bg-blue-700" >
+                       <h3> Go Home</h3>
+                      </Button>
+
+                    </SignedIn>
+
+                    <SignedOut>
+                      <Button asChild variant="secondary">
+                        <SignInButton> 🚀 Get Started</SignInButton>
+                      </Button>
+                    </SignedOut>
+
+
+                  </Button>
                   <Link
-                    href="/contact-us"
+                    href="https://wa.me/237694525931"
                     className="inline-block rounded-lg bg-gray-800 px-8 py-4 text-lg font-semibold text-white duration-300 ease-in-out hover:bg-gray-900 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                   >
                     Contact Us
@@ -277,6 +294,7 @@ const LandinPage = () => {
           </svg>
         </div>
       </section>
+      <AboutPage />
     </>
   );
 };

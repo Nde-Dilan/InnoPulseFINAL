@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import ThemeToggler from './ThemeToggler';
+import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs';
+import { Button } from '@/components/ui/button';
 
 const Headers = () => {
   // Navbar toggle
@@ -95,7 +97,7 @@ const Headers = () => {
                 >
                   <ul className="block lg:flex lg:space-x-12">
                     <li className="group relative">
-                      <Link href="/about">
+                      <Link href="#about">
                         <button
                           className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                             usePathName === '/about'
@@ -110,6 +112,15 @@ const Headers = () => {
                   </ul>
                 </nav>
               </div>
+              <SignedIn>
+          <UserButton />
+        </SignedIn>
+
+        <SignedOut>
+          <Button asChild variant="secondary">
+            <SignInButton />
+          </Button>
+        </SignedOut>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
                 <ThemeToggler />
               </div>
